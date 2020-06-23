@@ -1,5 +1,5 @@
 ﻿<h1>Bbuu20's Recoil Handler</h1>
-<a href="https://bbuu20-scripting.herokuapp.com/home">bbuu20.com</a>
+<a href="https://bbuu20-scripting.herokuapp.com/">bbuu20.com</a>
 
 <h2>Description</h2>
 <p>This is the source code for a recoil "script" I made for the video game Rust. It uses a windows forms user interface to constantly poll for input from the user, and then makes decisions based on any input change.</p>
