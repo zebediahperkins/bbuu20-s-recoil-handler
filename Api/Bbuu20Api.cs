@@ -9,19 +9,19 @@ namespace HttpApp
 
         public static bool DoesUserExist(String username, String password)
         {
-            return new HttpClient().GetAsync(DOMAIN + "/api/users/" + username + "/" + password).Result.IsSuccessStatusCode;
+            return new HttpClient().GetAsync(DOMAIN + "/api/login/?username=" + username + "&password=" + password).Result.IsSuccessStatusCode;
         }
         public static bool IsUserOnline(String username)
         {
-            return new HttpClient().GetAsync(DOMAIN + "/api/users/" + username + "/state").Result.IsSuccessStatusCode;
+            return new HttpClient().GetAsync(DOMAIN + "/api/status/?username=" + username).Result.IsSuccessStatusCode;
         }
         public static bool IsUserAuthorized(String username)
         {
-            return new HttpClient().GetAsync(DOMAIN + "/api/users/" + username + "/expires").Result.IsSuccessStatusCode;
+            return new HttpClient().GetAsync(DOMAIN + "/api/expires/?username=" + username).Result.IsSuccessStatusCode;
         }
         public static void ChangeLoginStatus(String username, String password)
         {
-            new HttpClient().GetAsync(DOMAIN + "/api/users/" + username + "/" + password + "/login");
+            new HttpClient().GetAsync(DOMAIN + "/api/changeStatus/?username=" + username + "&password=" + password);
         }
     }
 }
