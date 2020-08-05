@@ -1,7 +1,7 @@
 ﻿# Bbuu20's Recoil Handler
 
 ## Description
-An anti recoil script for the video game "Rust"
+An anti-recoil script for the video game "Rust"
 
 ## User Interface
 ![GUI](https://i.imgur.com/PmOdfav.png)
