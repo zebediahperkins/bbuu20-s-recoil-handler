@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30011.22
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bbuu20's Recoil Handler V2", "Bbuu20's Recoil Handler V2.csproj", "{5966D525-1969-4F79-991A-EA02A5CEFBC9}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5966D525-1969-4F79-991A-EA02A5CEFBC9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5966D525-1969-4F79-991A-EA02A5CEFBC9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5966D525-1969-4F79-991A-EA02A5CEFBC9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5966D525-1969-4F79-991A-EA02A5CEFBC9}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {8BE5DC8B-DF96-42E5-9111-51A7B37C3C6D}
+	EndGlobalSection
+EndGlobal

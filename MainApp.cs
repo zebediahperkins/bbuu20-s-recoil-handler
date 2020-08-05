@@ -1,21 +1,14 @@
-﻿using HttpApp;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Threading;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Bbuu20_s_Recoil_Handler_V2
 {
     static class MainApp
     {
-        public static String username;
-        public static String password;
-        public static bool isUserValid;
-        public static bool isUserOnline;
-        public static bool isUserAuthorized;
         public static GUI gui;
         public static Keys[] keys;
         public static Keys[] settingsKeys;
@@ -28,16 +21,7 @@ namespace Bbuu20_s_Recoil_Handler_V2
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Launcher());
-            if (isUserValid && !isUserOnline && isUserAuthorized)
-            {
-                Run();
-            }
-            while (Bbuu20Api.IsUserOnline(username))
-            {
-                Bbuu20Api.ChangeLoginStatus(username, password);
-                Thread.Sleep(50);
-            }
+            Run();
         }
 
         static void Run()
@@ -80,25 +64,6 @@ namespace Bbuu20_s_Recoil_Handler_V2
             gui.Invoke(new MethodInvoker(gui.UpdateTriggerBind));
             GUI.newBindText = settingsFile.Skip(1).First();
             gui.Invoke(new MethodInvoker(gui.UpdateTrackLabel));
-            while (Bbuu20Api.IsUserOnline(username))
-            {
-                i = 0;
-                foreach (Keys key in keys)
-                {
-                    if (InputHandler.IsKeyDown(key))
-                    {
-                        GUI.selectedWeapon = i;
-                        gui.Invoke(new MethodInvoker(gui.UpdateSelectedWeapon));
-                    }
-                    ++i;
-                }
-                Thread.Sleep(10);
-            }
-            if (gui.Visible)
-            {
-                gui.Invoke(new MethodInvoker(gui.Close));
-                MessageBox.Show("More than one user logged in under username " + username + ". All instances have been suspended, try login again. If you didn't try to login on another device, please change your password immediately.", "Multiple Instances", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
         }
 
         public static void UpdateControls()
