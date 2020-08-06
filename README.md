@@ -1,4 +1,7 @@
-﻿# Bbuu20's Recoil Handler
+# Bbuu20's Recoil Handler
+
+## How to run
+Download build.zip from https://github.com/zebediahperkins/bbuu20-s-recoil-handler/releases/tag/1.0.0, and then run the executable. The gui will appear when the script has started.
 
 ## Description
 An anti-recoil script for the video game "Rust"
